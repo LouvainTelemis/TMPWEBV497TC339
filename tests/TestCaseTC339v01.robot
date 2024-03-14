@@ -395,6 +395,9 @@ Test07
     [Documentation]    Enter a pre-existing medical number and check that the page shows the warning message "Medical number already exists"
     [Tags]    CRITICALITY HIGH
     Click Button    name=submit
+    Sleep    2s
+    Click element    id=login-register
+    Press Keys    None    PAGE_DOWN
     Wait Until Page Contains    Medical number already exists    timeout=15s
     Take My Screenshot
 
@@ -424,6 +427,9 @@ Test08
     Should Be Empty    ${MyValue}
 
     Click Button    name=submit
+    Sleep    2s
+    Click element    id=login-register
+    Press Keys    None    PAGE_DOWN
     Wait Until Page Contains    Required field    timeout=15s
     Take My Screenshot
 
